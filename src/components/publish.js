@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import  { useState , useRef} from 'react'
 
 export default function Publish(){
-    const [list , setList] = useState([<ActionAreaCard imgUrl="https://images-na.ssl-images-amazon.com/images/I/416Ecx-WB2L._AC_SY580_.jpg" name="hoodie" price="55dt" />])
+    const [list , setList] = useState([{imgUrl:"https://images-na.ssl-images-amazon.com/images/I/416Ecx-WB2L._AC_SY580_.jpg", name:"hoodie", price:"55dt"}])
     const nameRef = useRef();
     const priceRef = useRef();
     const urlRef = useRef();
@@ -22,7 +22,7 @@ export default function Publish(){
          <Button onClick={addProduct} style={{height:"50px"}} variant="contained">Publish</Button>
          </div>
          <div style={{display:"grid",gridTemplateColumns:"repeat(5,1fr)",gridRowGap:"10px",margin:"auto",paddingTop:"30px",width:"80%"}}>
-             {list}
+             {list.map(elt=><ActionAreaCard imgUrl={elt.imgUrl} name={elt.name} price={elt.price} />)}
          </div>
         </div>
     )
