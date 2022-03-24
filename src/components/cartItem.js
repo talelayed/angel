@@ -25,7 +25,7 @@ export default function ActionAreaCard(props) {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <Button style={{height:"30px",marginBottom:"10px"}} variant="contained">Remove</Button>
+      <Button onClick={()=>props.remove(props.id)} style={{height:"30px",marginBottom:"10px"}} variant="contained">Remove</Button>
     </Card>
   );
 }
