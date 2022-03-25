@@ -24,7 +24,7 @@ export default function ActionAreaCard(props) {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <Button style={{height:"30px",marginBottom:"10px"}} variant="contained">Search</Button>
+      <Button style={{height:"30px",marginBottom:"10px"}} variant="contained">Buy</Button>
     </Card>
   );
 }
