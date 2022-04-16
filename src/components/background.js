@@ -4,25 +4,25 @@ import Sky from 'react-sky';
 // you can pass imported images to Sky
 
 
-class Background extends Component {
-  render() {
+export default function Background() {
     return (
       <div>
         <Sky
           images={{ 
             /* FORMAT AS FOLLOWS */
-            0: "https://e7.pngegg.com/pngimages/136/1024/png-clipart-watercolor-leaves-plant-green-thumbnail.png",  /* You can pass as many images as you want */
-            1: "https://e7.pngegg.com/pngimages/136/1024/png-clipart-watercolor-leaves-plant-green-thumbnail.png",
-            2: "https://e7.pngegg.com/pngimages/136/1024/png-clipart-watercolor-leaves-plant-green-thumbnail.png",
+            0: "/imgs/back0.png",  /* You can pass as many images as you want */
+            1: "/imgs/back2.png",
+            2: "/imgs/back3.png",
+            3: "/imgs/back4.png",
+            4: "/imgs/back5.png",
+            5:"/imgs/back6.png",
           }}
           how={50} /* Pass the number of images Sky will render chosing randomly */
-          time={40} /* time of animation */
-          size={'30px'} /* size of the rendered images */
+          time={400} /* time of animation */
+          size={'50px'} /* size of the rendered images */
           background={'palettedvioletred'} /* color of background */
         />
       </div>
     );
   }
-}
 
-export default Background;

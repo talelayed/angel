@@ -1,9 +1,8 @@
 import { REMOVE } from "./actionTypes"
 
-export const remove = (id,price) => {
+export const remove = (id) => {
     return({
         type: REMOVE,
-        id: id,
-        price:price
+        payload:{id: id}
     })
 }

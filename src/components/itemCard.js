@@ -6,8 +6,6 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import Button from '@mui/material/Button';
-import { addToCart } from './../redux/actions/addToCartAction'
-import totalCart from './../redux/actions/totalCartAction'
 import Rating from '@mui/material/Rating';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 
@@ -17,7 +15,7 @@ export default function ActionAreaCard(props) {
   return (
     <Card sx={{ maxWidth: 200 }}>
       <CardActionArea>
-        <CardMedia onClick={()=>navigate(`/product/${props.id}`)}
+        <CardMedia 
           component="img"
           height="140"
           image={props.imgUrl}
@@ -33,7 +31,7 @@ export default function ActionAreaCard(props) {
       </CardActionArea>
       <div style={{display:"flex",justifyContent:"space-around",padding:"5%"}}>
          <Rating style={{marginTop:"auto",marginBottom:"auto"}} name="size-small" defaultValue={4} size="small" />
-         <Button onClick={()=>{dispatch( addToCart(props.imgUrl,props.name,props.price,props.id) );dispatch( totalCart(props.price))}} style={{height:"30px",marginTop:"auto",marginBottom:"auto"}} variant="contained">Buy</Button>
+         <Button onClick={()=>navigate(`/product/${props.id}`)}style={{height:"30px",marginTop:"auto",marginBottom:"auto"}} variant="contained">Buy</Button>
       </div>
     </Card>
   );

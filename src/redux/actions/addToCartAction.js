@@ -1,12 +1,11 @@
 import { ADDTOCART } from "./actionTypes"
 
-export const addToCart = (imgUrl,name,price,id) => {
+export const addToCart = (id) => {
     return ({
         type: ADDTOCART,
-        imgUrl: imgUrl,
-        name: name,
-        price: price,
-        id: id
+        payload:{
+            id:id
+        }
     }
     )
 }

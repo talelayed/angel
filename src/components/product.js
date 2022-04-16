@@ -2,12 +2,9 @@ import * as React from "react"
 import { useDispatch } from 'react-redux';
 import Button from '@mui/material/Button';
 import { addToCart } from './../redux/actions/addToCartAction'
-import totalCart from './../redux/actions/totalCartAction'
 import Rating from '@mui/material/Rating';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
+
     useParams,
   } from "react-router-dom";
   import {Data} from './data'
@@ -27,7 +24,7 @@ export default function Product(){
               <h4 style={{fontSize:"20px",color:"gray"}}>{elt.price}dt</h4>
               <Rating style={{marginTop:"auto",marginBottom:"auto"}} name="size-small" defaultValue={4} size="medium" />
               <div>
-              <Button onClick={()=>{dispatch( addToCart(elt.imgUrl,elt.name,elt.price,elt.id) );dispatch( totalCart(elt.price))}} style={{width:"100px",marginTop:"20px",marginBottom:"auto"}} variant="contained">Buy</Button>
+              <Button onClick={()=>{dispatch(addToCart(elt.id))}} style={{width:"100px",marginTop:"20px",marginBottom:"auto"}} variant="contained">Buy</Button>
               </div>
               </div>
           </div>)
